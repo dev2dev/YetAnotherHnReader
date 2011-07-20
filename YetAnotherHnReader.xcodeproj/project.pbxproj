@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70DCF87313D6BDB100C2E27B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DCF87213D6BDB100C2E27B /* UIKit.framework */; };
+		70DCF87513D6BDB100C2E27B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DCF87413D6BDB100C2E27B /* Foundation.framework */; };
+		70DCF87713D6BDB100C2E27B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DCF87613D6BDB100C2E27B /* CoreGraphics.framework */; };
+		70DCF87D13D6BDB200C2E27B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70DCF87B13D6BDB200C2E27B /* InfoPlist.strings */; };
+		70DCF88013D6BDB200C2E27B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DCF87F13D6BDB200C2E27B /* main.m */; };
+		70DCF88313D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DCF88213D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.m */; };
+		70DCF88613D6BDB200C2E27B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DCF88413D6BDB200C2E27B /* MainWindow.xib */; };
+		70DCF88D13D6BDB200C2E27B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DCF87213D6BDB100C2E27B /* UIKit.framework */; };
+		70DCF88E13D6BDB200C2E27B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DCF87413D6BDB100C2E27B /* Foundation.framework */; };
+		70DCF88F13D6BDB200C2E27B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DCF87613D6BDB100C2E27B /* CoreGraphics.framework */; };
+		70DCF89713D6BDB200C2E27B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70DCF89513D6BDB200C2E27B /* InfoPlist.strings */; };
+		70DCF89A13D6BDB200C2E27B /* YetAnotherHnReaderTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 70DCF89913D6BDB200C2E27B /* YetAnotherHnReaderTests.h */; };
+		70DCF89C13D6BDB200C2E27B /* YetAnotherHnReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DCF89B13D6BDB200C2E27B /* YetAnotherHnReaderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70DCF89013D6BDB200C2E27B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70DCF86513D6BDB100C2E27B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70DCF86D13D6BDB100C2E27B;
+			remoteInfo = YetAnotherHnReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70DCF86E13D6BDB100C2E27B /* YetAnotherHnReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YetAnotherHnReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70DCF87213D6BDB100C2E27B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		70DCF87413D6BDB100C2E27B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		70DCF87613D6BDB100C2E27B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		70DCF87A13D6BDB100C2E27B /* YetAnotherHnReader-Info.plist */ = {isa = PBXFileReference; path = "YetAnotherHnReader-Info.plist"; sourceTree = "<group>"; };
+		70DCF87C13D6BDB200C2E27B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		70DCF87E13D6BDB200C2E27B /* YetAnotherHnReader-Prefix.pch */ = {isa = PBXFileReference; path = "YetAnotherHnReader-Prefix.pch"; sourceTree = "<group>"; };
+		70DCF87F13D6BDB200C2E27B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		70DCF88113D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.h */ = {isa = PBXFileReference; path = YetAnotherHnReaderAppDelegate.h; sourceTree = "<group>"; };
+		70DCF88213D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YetAnotherHnReaderAppDelegate.m; sourceTree = "<group>"; };
+		70DCF88513D6BDB200C2E27B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		70DCF88C13D6BDB200C2E27B /* YetAnotherHnReaderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YetAnotherHnReaderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70DCF89413D6BDB200C2E27B /* YetAnotherHnReaderTests-Info.plist */ = {isa = PBXFileReference; path = "YetAnotherHnReaderTests-Info.plist"; sourceTree = "<group>"; };
+		70DCF89613D6BDB200C2E27B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		70DCF89813D6BDB200C2E27B /* YetAnotherHnReaderTests-Prefix.pch */ = {isa = PBXFileReference; path = "YetAnotherHnReaderTests-Prefix.pch"; sourceTree = "<group>"; };
+		70DCF89913D6BDB200C2E27B /* YetAnotherHnReaderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YetAnotherHnReaderTests.h; sourceTree = "<group>"; };
+		70DCF89B13D6BDB200C2E27B /* YetAnotherHnReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YetAnotherHnReaderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70DCF86B13D6BDB100C2E27B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70DCF87313D6BDB100C2E27B /* UIKit.framework in Frameworks */,
+				70DCF87513D6BDB100C2E27B /* Foundation.framework in Frameworks */,
+				70DCF87713D6BDB100C2E27B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70DCF88813D6BDB200C2E27B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70DCF88D13D6BDB200C2E27B /* UIKit.framework in Frameworks */,
+				70DCF88E13D6BDB200C2E27B /* Foundation.framework in Frameworks */,
+				70DCF88F13D6BDB200C2E27B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70DCF86313D6BDB100C2E27B = {
+			isa = PBXGroup;
+			children = (
+				70DCF87813D6BDB100C2E27B /* YetAnotherHnReader */,
+				70DCF89213D6BDB200C2E27B /* YetAnotherHnReaderTests */,
+				70DCF87113D6BDB100C2E27B /* Frameworks */,
+				70DCF86F13D6BDB100C2E27B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70DCF86F13D6BDB100C2E27B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70DCF86E13D6BDB100C2E27B /* YetAnotherHnReader.app */,
+				70DCF88C13D6BDB200C2E27B /* YetAnotherHnReaderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70DCF87113D6BDB100C2E27B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70DCF87213D6BDB100C2E27B /* UIKit.framework */,
+				70DCF87413D6BDB100C2E27B /* Foundation.framework */,
+				70DCF87613D6BDB100C2E27B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70DCF87813D6BDB100C2E27B /* YetAnotherHnReader */ = {
+			isa = PBXGroup;
+			children = (
+				70DCF88113D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.h */,
+				70DCF88213D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.m */,
+				70DCF88413D6BDB200C2E27B /* MainWindow.xib */,
+				70DCF87913D6BDB100C2E27B /* Supporting Files */,
+			);
+			path = YetAnotherHnReader;
+			sourceTree = "<group>";
+		};
+		70DCF87913D6BDB100C2E27B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70DCF87A13D6BDB100C2E27B /* YetAnotherHnReader-Info.plist */,
+				70DCF87B13D6BDB200C2E27B /* InfoPlist.strings */,
+				70DCF87E13D6BDB200C2E27B /* YetAnotherHnReader-Prefix.pch */,
+				70DCF87F13D6BDB200C2E27B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70DCF89213D6BDB200C2E27B /* YetAnotherHnReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				70DCF89913D6BDB200C2E27B /* YetAnotherHnReaderTests.h */,
+				70DCF89B13D6BDB200C2E27B /* YetAnotherHnReaderTests.m */,
+				70DCF89313D6BDB200C2E27B /* Supporting Files */,
+			);
+			path = YetAnotherHnReaderTests;
+			sourceTree = "<group>";
+		};
+		70DCF89313D6BDB200C2E27B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70DCF89413D6BDB200C2E27B /* YetAnotherHnReaderTests-Info.plist */,
+				70DCF89513D6BDB200C2E27B /* InfoPlist.strings */,
+				70DCF89813D6BDB200C2E27B /* YetAnotherHnReaderTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70DCF86D13D6BDB100C2E27B /* YetAnotherHnReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70DCF89F13D6BDB200C2E27B /* Build configuration list for PBXNativeTarget "YetAnotherHnReader" */;
+			buildPhases = (
+				70DCF86A13D6BDB100C2E27B /* Sources */,
+				70DCF86B13D6BDB100C2E27B /* Frameworks */,
+				70DCF86C13D6BDB100C2E27B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YetAnotherHnReader;
+			productName = YetAnotherHnReader;
+			productReference = 70DCF86E13D6BDB100C2E27B /* YetAnotherHnReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70DCF88B13D6BDB200C2E27B /* YetAnotherHnReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70DCF8A213D6BDB200C2E27B /* Build configuration list for PBXNativeTarget "YetAnotherHnReaderTests" */;
+			buildPhases = (
+				70DCF88713D6BDB200C2E27B /* Sources */,
+				70DCF88813D6BDB200C2E27B /* Frameworks */,
+				70DCF88913D6BDB200C2E27B /* Resources */,
+				70DCF88A13D6BDB200C2E27B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70DCF89113D6BDB200C2E27B /* PBXTargetDependency */,
+			);
+			name = YetAnotherHnReaderTests;
+			productName = YetAnotherHnReaderTests;
+			productReference = 70DCF88C13D6BDB200C2E27B /* YetAnotherHnReaderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70DCF86513D6BDB100C2E27B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 70DCF86813D6BDB100C2E27B /* Build configuration list for PBXProject "YetAnotherHnReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70DCF86313D6BDB100C2E27B;
+			productRefGroup = 70DCF86F13D6BDB100C2E27B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70DCF86D13D6BDB100C2E27B /* YetAnotherHnReader */,
+				70DCF88B13D6BDB200C2E27B /* YetAnotherHnReaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70DCF86C13D6BDB100C2E27B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70DCF87D13D6BDB200C2E27B /* InfoPlist.strings in Resources */,
+				70DCF88613D6BDB200C2E27B /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70DCF88913D6BDB200C2E27B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70DCF89713D6BDB200C2E27B /* InfoPlist.strings in Resources */,
+				70DCF89A13D6BDB200C2E27B /* YetAnotherHnReaderTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70DCF88A13D6BDB200C2E27B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70DCF86A13D6BDB100C2E27B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70DCF88013D6BDB200C2E27B /* main.m in Sources */,
+				70DCF88313D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70DCF88713D6BDB200C2E27B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70DCF89C13D6BDB200C2E27B /* YetAnotherHnReaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70DCF89113D6BDB200C2E27B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70DCF86D13D6BDB100C2E27B /* YetAnotherHnReader */;
+			targetProxy = 70DCF89013D6BDB200C2E27B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70DCF87B13D6BDB200C2E27B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70DCF87C13D6BDB200C2E27B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		70DCF88413D6BDB200C2E27B /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70DCF88513D6BDB200C2E27B /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		70DCF89513D6BDB200C2E27B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70DCF89613D6BDB200C2E27B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70DCF89D13D6BDB200C2E27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		70DCF89E13D6BDB200C2E27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		70DCF8A013D6BDB200C2E27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YetAnotherHnReader/YetAnotherHnReader-Prefix.pch";
+				INFOPLIST_FILE = "YetAnotherHnReader/YetAnotherHnReader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		70DCF8A113D6BDB200C2E27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YetAnotherHnReader/YetAnotherHnReader-Prefix.pch";
+				INFOPLIST_FILE = "YetAnotherHnReader/YetAnotherHnReader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		70DCF8A313D6BDB200C2E27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YetAnotherHnReader.app/YetAnotherHnReader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YetAnotherHnReaderTests/YetAnotherHnReaderTests-Prefix.pch";
+				INFOPLIST_FILE = "YetAnotherHnReaderTests/YetAnotherHnReaderTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		70DCF8A413D6BDB200C2E27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YetAnotherHnReader.app/YetAnotherHnReader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YetAnotherHnReaderTests/YetAnotherHnReaderTests-Prefix.pch";
+				INFOPLIST_FILE = "YetAnotherHnReaderTests/YetAnotherHnReaderTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70DCF86813D6BDB100C2E27B /* Build configuration list for PBXProject "YetAnotherHnReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70DCF89D13D6BDB200C2E27B /* Debug */,
+				70DCF89E13D6BDB200C2E27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70DCF89F13D6BDB200C2E27B /* Build configuration list for PBXNativeTarget "YetAnotherHnReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70DCF8A013D6BDB200C2E27B /* Debug */,
+				70DCF8A113D6BDB200C2E27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		70DCF8A213D6BDB200C2E27B /* Build configuration list for PBXNativeTarget "YetAnotherHnReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70DCF8A313D6BDB200C2E27B /* Debug */,
+				70DCF8A413D6BDB200C2E27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70DCF86513D6BDB100C2E27B /* Project object */;
+}
