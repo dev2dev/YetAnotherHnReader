@@ -172,8 +172,8 @@
 				70DCF88113D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.h */,
 				70DCF88213D6BDB200C2E27B /* YetAnotherHnReaderAppDelegate.m */,
 				70DCF8D513D6BF3400C2E27B /* MainWindow.xib */,
-				70DCF8AE13D6BE2E00C2E27B /* DetailViewController.m */,
 				70DCF8AF13D6BE2E00C2E27B /* DetailViewController.h */,
+				70DCF8AE13D6BE2E00C2E27B /* DetailViewController.m */,
 				7012953213D6C19700CB815C /* DetailView.xib */,
 				70DCF8B113D6BE2E00C2E27B /* RootViewController.h */,
 				70DCF8B013D6BE2E00C2E27B /* RootViewController.m */,
@@ -232,8 +232,8 @@
 				70DCF8B513D6BE2E00C2E27B /* Item.m */,
 				70DCF8B913D6BE2E00C2E27B /* iPhoneRSS.h */,
 				70DCF8B813D6BE2E00C2E27B /* iPhoneRSS.m */,
-				70DCF8BA13D6BE2E00C2E27B /* Reachability.m */,
 				70DCF8BB13D6BE2E00C2E27B /* Reachability.h */,
+				70DCF8BA13D6BE2E00C2E27B /* Reachability.m */,
 			);
 			name = other;
 			sourceTree = "<group>";

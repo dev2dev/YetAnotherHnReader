@@ -13,8 +13,7 @@
 	return self;
 }
 
-- (void)parser:(NSXMLParser *)parser 
-didStartElement:(NSString *)elementName  
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName  
   namespaceURI:(NSString *)namespaceURI 
  qualifiedName:(NSString *)qualifiedName 
     attributes:(NSDictionary *)attributeDict 
