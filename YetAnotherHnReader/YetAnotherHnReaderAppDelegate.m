@@ -7,16 +7,25 @@
 //
 
 #import "YetAnotherHnReaderAppDelegate.h"
+#import "RootViewController.h"
+#import "DetailViewController.h"
+#import "Reachability.h"
 
 @implementation YetAnotherHnReaderAppDelegate
 
-
 @synthesize window=_window;
+@synthesize splitViewController, rootViewController, detailViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [self.window makeKeyAndVisible];
+	internetReach = [[Reachability reachabilityForInternetConnection] retain];
+	[internetReach startNotifer];
+	[self updateInterfaceWithReachability:internetReach];
+    
+    
+    self.window.rootViewController = splitViewController;
+    [window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -59,8 +68,39 @@
      */
 }
 
+- (void)updateInterfaceWithReachability:(Reachability *)curReach
+{   		
+	NetworkStatus netStatus = [curReach currentReachabilityStatus];
+    
+    switch (netStatus)
+    {
+        case NotReachable:
+        {
+			UIAlertView *charAlert = [[UIAlertView alloc]   initWithTitle:@"Connection Problem"  
+                                                                  message:@"There is no internet connection so I can not show you the feed."  
+                                                                 delegate:nil  
+                                                        cancelButtonTitle:@"Ok"  
+                                                        otherButtonTitles:nil];
+			
+			[charAlert show];
+			[charAlert autorelease];
+			
+            break;
+        }
+            
+        case ReachableViaWWAN:
+        case ReachableViaWiFi:
+        {
+            
+            break;
+		}
+	}			
+}
+
+
 - (void)dealloc
 {
+    [splitViewController release];
     [_window release];
     [super dealloc];
 }

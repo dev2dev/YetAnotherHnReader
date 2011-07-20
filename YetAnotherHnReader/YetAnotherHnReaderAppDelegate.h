@@ -8,10 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YetAnotherHnReaderAppDelegate : NSObject <UIApplicationDelegate> {
+@class RootViewController;
+@class DetailViewController;
+@class Reachability;
 
+@interface YetAnotherHnReaderAppDelegate : NSObject <UIApplicationDelegate> 
+{
+    UIWindow *window;
+    
+    UISplitViewController *splitViewController;
+    
+    RootViewController *rootViewController;
+    DetailViewController *detailViewController;
+	
+	Reachability* internetReach;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UISplitViewController *splitViewController;
+@property (nonatomic, retain) IBOutlet RootViewController *rootViewController;
+@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+
+- (void)updateInterfaceWithReachability:(Reachability *)curReach;
 
 @end
