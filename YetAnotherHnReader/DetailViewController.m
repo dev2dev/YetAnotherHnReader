@@ -13,6 +13,10 @@
 #import <MessageUI/MessageUI.h>
 #import "Item.h"
 
+@interface DetailViewController (Private)
+- (void)presentMailComposer:(NSString *)subject withBody:(NSString *)body;
+@end
+
 @interface DetailViewController ()
 
 @property (nonatomic, retain) UIPopoverController *popoverController;
@@ -31,9 +35,6 @@
 #pragma mark -
 #pragma mark Managing the detail item
 
-/*
- When setting the detail item, update the view and dismiss the popover controller if it's showing.
- */
 - (void)setDetailItem:(Item *)newDetailItem 
 {	
     if (detailItem != newDetailItem) 
@@ -41,7 +42,6 @@
         [detailItem release];
         detailItem = [newDetailItem retain];
         
-        // Update the view.
         [self configureView];
     }
 
@@ -53,31 +53,20 @@
 
 - (void)configureView 
 {	
-	//[acivityIndicator startAnimating];
-	//acivityIndicator.center = self.view.center;
-	//
-	//[self showLoadingView];
-
-	
-	NSLog(@"configureView is running...");
-	
 	[mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[detailItem link]]]];
 	[commentWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[detailItem comments]]]];
-	
 	commentWebView.hidden = TRUE;
-	
-	NSLog(@"configureView is done..!");
 	segmented.selectedSegmentIndex = 0;
-	
 }
 
 #pragma mark -
 #pragma mark Split view support
 
-- (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc 
+- (void)splitViewController: (UISplitViewController*)svc 
+     willHideViewController:(UIViewController *)aViewController 
+          withBarButtonItem:(UIBarButtonItem*)barButtonItem 
+       forPopoverController: (UIPopoverController*)pc 
 {
-    NSLog(@"willHideViewController...1");
-	
     barButtonItem.title = @"HN";
     NSMutableArray *items = [[toolbar items] mutableCopy];
     [items insertObject:barButtonItem atIndex:0];
@@ -86,12 +75,10 @@
     self.popoverController = pc;
 }
 
-
-// Called when the view is shown again in the split view, invalidating the button and popover controller.
-- (void)splitViewController: (UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem 
+- (void)splitViewController: (UISplitViewController*)svc 
+     willShowViewController:(UIViewController *)aViewController 
+  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem 
 {
-	NSLog(@"willShowViewController...");
-	
     NSMutableArray *items = [[toolbar items] mutableCopy];
     [items removeObjectAtIndex:0];
     [toolbar setItems:items animated:YES];
@@ -254,13 +241,39 @@
 	}
 	else if(buttonIndex == 2)
 	{
-		MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
-		controller.mailComposeDelegate = self;
-		[controller setSubject:[NSString stringWithFormat: @"Check out this link -- %@", [detailItem title]]];
-		[controller setMessageBody:[NSString stringWithFormat:@"%@ <br><br>--<br>This mail is send by <b>Yet Another HN iPad Reader Application</b>",[detailItem comments]] isHTML:YES];
-		[self presentModalViewController:controller animated:YES];
-		[controller release];
+        [self presentMailComposer:[detailItem title] withBody:[detailItem comments]];
 	}
+	else if(buttonIndex == 3)
+	{
+        NSString *urlPath = nil;
+        
+        //mainview
+        if(segmented.selectedSegmentIndex == 0)
+        {
+            urlPath = [[[mainWebView request] URL] absoluteString];
+        }
+        else
+        {
+            urlPath = [[[commentWebView request] URL] absoluteString];
+        }
+        
+        [self presentMailComposer:@"Link from HNReader iPad App" withBody:urlPath];
+	}
+        
+}
+
+- (void)presentMailComposer:(NSString *)subject withBody:(NSString *)body
+{
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+    controller.mailComposeDelegate = self;
+    
+    [controller setSubject:[NSString stringWithFormat: @"Check out this link -- %@", subject]];
+    
+    [controller setMessageBody:[NSString stringWithFormat:@"%@ <br><br>--<br>This mail is send by <b>Yet Another HN iPad Reader Application</b>",body] 
+                        isHTML:YES];
+    
+    [self presentModalViewController:controller animated:YES];
+    [controller release];
 
 }
 
@@ -331,7 +344,7 @@
 								  delegate:self 
 								  cancelButtonTitle:@"No way!"
 								  destructiveButtonTitle:nil
-								  otherButtonTitles:@"Twitter",@"Facebook", @"Email",nil];
+								  otherButtonTitles:@"Twitter", @"Facebook", @"Email", @"Email what I see now", nil];
 	
 	
 	actionSheet.actionSheetStyle = UIActionSheetStyleAutomatic;

@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 
-#import "Item.h"
+@class Item;
 
 @interface DetailViewController : UIViewController 
-<MFMailComposeViewControllerDelegate, UIActionSheetDelegate, 
-UIWebViewDelegate, UIPopoverControllerDelegate, UISplitViewControllerDelegate> 
+        <MFMailComposeViewControllerDelegate, 
+        UIActionSheetDelegate, 
+        UIWebViewDelegate, 
+        UIPopoverControllerDelegate, 
+        UISplitViewControllerDelegate> 
 {    
     UIPopoverController *popoverController;
     UIToolbar *toolbar;
