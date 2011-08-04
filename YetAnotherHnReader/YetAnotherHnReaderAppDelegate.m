@@ -10,6 +10,7 @@
 #import "RootViewController.h"
 #import "DetailViewController.h"
 #import "Reachability.h"
+#import "LocalyticsSession.h"
 
 @implementation YetAnotherHnReaderAppDelegate
 
@@ -18,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"localitics_key" ofType:@""];
+    NSString *localitics_key = [NSString stringWithContentsOfFile:fullPath encoding:NSASCIIStringEncoding error:nil];
+    
+    // Override point for customization after application launch.
+    [[LocalyticsSession sharedLocalyticsSession] startSession:localitics_key];
+    
 	internetReach = [[Reachability reachabilityForInternetConnection] retain];
 	[internetReach startNotifer];
 	[self updateInterfaceWithReachability:internetReach];
@@ -39,17 +46,14 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
+	[[LocalyticsSession sharedLocalyticsSession] close];
+	[[LocalyticsSession sharedLocalyticsSession] upload];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
+- (void)applicationWillEnterForeground:(UIApplication *)application 
 {
-    /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-     */
+ 	[[LocalyticsSession sharedLocalyticsSession] resume];
+	[[LocalyticsSession sharedLocalyticsSession] upload];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
